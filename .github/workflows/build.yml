@@ -1,0 +1,17 @@
+name: build
+
+on: push
+jobs:
+  my-job:
+    runs-on: self-hosted
+    steps:
+      - name: Show uptime
+        run: uptime
+      - name: List CPUs
+        run: lscpu
+      - name: Show RAM
+        run: free -h
+      - name: Show disk
+        run: df -h /
+      - name: Show kernel
+        run: uname -a
